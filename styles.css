@@ -25,6 +25,8 @@ audio:not([controls]) { display: none; }
   --green: #5CEBB5;
   --purple: #D58CDC;
   --orange: #FFD77E;
+  --grey: rgba(175,175,175,.75);
+  --black: rgba(0,0,0,.6);
 }
 
 
@@ -32,11 +34,15 @@ audio:not([controls]) { display: none; }
  *      Base 
  */
 
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 html {
     font-size: 100%;
     overflow-y: auto-webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
-    height: 100%;
 }
 
 body {
@@ -85,14 +91,28 @@ a:hover, a:active { outline: 0; }
  *      Headings
  */
 
-h1 {
-    font-size: 28vh;
-    /* width: 0; */
-    /* height: 0; */
-    letter-spacing: .05em;
-    bottom: 11%;
-    right: 42%;
-    color: rgba(255,255,255,.2);
+h2, h3, h4 {
+    margin: 16px 0;
+}
+
+h1, h3, h4, h5 {
+    letter-spacing: 1.2px;
+    color: var(--grey);
+}
+
+h2, h6 {
+    margin: 16px 0 0;
+    letter-spacing: 1.2px;
+    color: var(--black);
+} 
+
+
+h2 {
+    font-size: 36px;
+}
+
+h6 {
+    font-size: 11px;
 }
 
 .title {
@@ -164,16 +184,16 @@ label {
     letter-spacing: .06em;
 }
 
-
 /*
  *      Embedded Content
  */
+
 
 /*
  * Improve image quality when scaled in IE7: h5bp.com/d
  * Remove the gap between images and borders on image containers: h5bp.com/e
  */
-img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; background-repeat: no-repeat; width: 100%; height: 100%; float: left; }
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; background-repeat: no-repeat; width: 100%; min-height: 100%; float: right;}
 
 /* Correct overflow not hidden in IE9 */
 svg:not(:root) { overflow: hidden; }
@@ -268,6 +288,84 @@ input::-moz-placeholder {  /* Firefox 19+ */
 input:-ms-input-placeholder {  
     color: rgba(75,75,75,.4) !important;  
 }
+
+/*
+ *      Nav
+ */
+
+#navbar_container {
+    position: fixed;
+    width: 10vw;
+    min-width: 240px;
+    height: 100vh;
+    display: table;
+    text-align: center;
+    border-right: 2px solid rgba(155,155,155,.4);
+    background-color: rgba(183,183,183,.95);
+}
+
+#nav_name {
+    position: absolute;
+    width: 100%;
+    margin: 0;
+}
+
+#navbar_container a:hover, #navbar_container a:active, #navbar_container a:focus   {
+    text-decoration: none;
+}
+
+#nav_tagline {
+    position: absolute;
+    width: 100%;
+    margin: 46px 0 0;
+}
+
+#nav_container {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+}
+
+#navbar_container a {
+    z-index: 1;
+    color: var(--black);
+    font-weight: 600;
+}
+
+#nav_container a {
+    padding: 8px 0;
+    font-size: 18px;
+
+}
+
+#nav_container a:hover {
+    background-color: rgba(203,203,203,1);
+
+}
+
+
+/*
+ *     Page Containers
+ */
+
+.page_container {
+    width: 100%;
+    height: 100vh;
+    min-height: 512px;
+}
+
+#bio {
+    
+}
+
+#bio img {
+    width: 100%;
+    min-height: 100%;}
 
 
 /*
