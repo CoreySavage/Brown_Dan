@@ -26,6 +26,7 @@ audio:not([controls]) { display: none; }
   --purple: #D58CDC;
   --orange: #FFD77E;
   --grey: rgba(175,175,175,.75);
+  --grey_text: rgba(175,175,175,.9);
   --black: rgba(0,0,0,.6);
 }
 
@@ -91,28 +92,41 @@ a:hover, a:active { outline: 0; }
  *      Headings
  */
 
-h2, h3, h4 {
-    margin: 16px 0;
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    letter-spacing: 1.2px;
 }
 
-h1, h3, h4, h5 {
-    letter-spacing: 1.2px;
-    color: var(--grey);
+h1, h3, h4, h5, {
+    padding: 32px 0 0 8px;
 }
 
 h2, h6 {
-    margin: 16px 0 0;
-    letter-spacing: 1.2px;
-    color: var(--black);
-} 
+    padding: 4px 0 0;
+}
 
+h2, h3, h4, h6 {
+    color: var(--black);
+}
+
+h1, h3, h4, h5 {
+    color: var(--grey_text);
+}
+
+
+h1 {
+    font-size: 44px;
+    font-weight: 100;
+}
 
 h2 {
     font-size: 36px;
+    font-weight: 200;
 }
 
 h6 {
-    font-size: 11px;
+    font-size: 12px;
+    font-weight: 300;
 }
 
 .title {
@@ -125,7 +139,7 @@ h6 {
  *      Typography
  */
 
-p {color: #ffffff; opacity: 0.9; filter: alpha(opacity=90);}
+p {color: var(--grey_text)}
 
 abbr[title] { border-bottom: 1px dotted; }
 
@@ -295,13 +309,14 @@ input:-ms-input-placeholder { 
 
 #navbar_container {
     position: fixed;
-    width: 10vw;
-    min-width: 240px;
+    z-index: 1;
+    width: 240px;
     height: 100vh;
     display: table;
     text-align: center;
     border-right: 2px solid rgba(155,155,155,.4);
     background-color: rgba(183,183,183,.95);
+    color: var(--black);
 }
 
 #nav_name {
@@ -334,7 +349,7 @@ nav {
 #navbar_container a {
     z-index: 1;
     color: var(--black);
-    font-weight: 600;
+    font-weight: 400;
 }
 
 #nav_container a {
@@ -360,12 +375,78 @@ nav {
 }
 
 #bio {
-    
+    background-image: url(img/microphone.png);
+    background-size: cover;
 }
 
-#bio img {
-    width: 100%;
-    min-height: 100%;}
+#shows {
+    background-image: url(img/cleveland_flats.png);
+    background-size: cover;
+
+
+}
+
+#shows_content_container {
+    text-align: center;
+    margin: 0 0 0 240px;
+    padding: 20vh 0;
+}
+
+#shows_table {
+    display: inline-block;
+    width: 680px;
+    background-color: rgba(0,0,0,.38);
+    border: 1px solid rgba(0,0,0,.6);
+    border-radius: 15px;
+    height: 600px;
+}
+
+#podcast {
+    background-image: url(img/microphone.png);
+    background-size: cover;
+
+}
+
+#pictures {
+    background-image: url(img/cleveland_playhouse.png);
+    background-size: cover;
+
+}
+
+#videos {
+    background-image: url(img/spotlight.png);
+    background-size: cover;
+
+
+}
+
+#book {
+    background-image: url(img/stage_curtain.png);
+    background-size: cover;
+
+
+}
+
+#bio_content_container {
+        position: absolute;
+    right: 0%;
+    top: 22%;
+    width: 720px;
+    color: var(--grey_text);
+    font-weight: 100;
+}
+
+#bio_content_container h2 {
+    font-weight: 100;
+}
+
+#bio_text_box {
+    width: 640px;
+    font-size: 16px;
+    font-weight: 200;
+    text-align: center;
+    padding: 8px 0 8px 32px;
+}
 
 
 /*
