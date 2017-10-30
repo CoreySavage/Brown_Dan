@@ -303,6 +303,21 @@ input:-ms-input-placeholder { 
     color: rgba(75,75,75,.4) !important;  
 }
 
+
+/*
+ *     Tables
+ */
+
+table, th, td {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--grey_text);
+    padding: 4px;
+
+}
+
+
+
+
 /*
  *      Nav
  */
@@ -389,7 +404,7 @@ nav {
 #shows_content_container {
     text-align: center;
     margin: 0 0 0 240px;
-    padding: 20vh 0;
+    padding: 12vh 0;
 }
 
 #shows_table {
@@ -401,8 +416,15 @@ nav {
     height: 600px;
 }
 
+#shows_table_content {
+    padding: 8px;
+    border-top: 2px solid var(--grey_text);
+    width: 90%;
+    margin: 4px 4%;
+}
+
 #podcast {
-    background-image: url(img/microphone.png);
+    background-image: url(img/action_figure.png);
     background-size: cover;
 
 }
@@ -429,9 +451,9 @@ nav {
 
 #bio_content_container {
         position: absolute;
-    right: 0%;
+    right: 12%;
     top: 22%;
-    width: 720px;
+    width: 680px;
     color: var(--grey_text);
     font-weight: 100;
 }
@@ -441,11 +463,11 @@ nav {
 }
 
 #bio_text_box {
-    width: 640px;
+    width: 600px;
     font-size: 16px;
     font-weight: 200;
     text-align: center;
-    padding: 8px 0 8px 32px;
+    padding: 8px 0 8px 56px;
 }
 
 
