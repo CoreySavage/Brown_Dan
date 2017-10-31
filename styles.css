@@ -245,10 +245,10 @@ input[type=text], input[type=email], select, textarea {
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
-    border: 1px solid #ccc;
+    border: 1px solid var(--black);
     border-radius: 4px;
     box-sizing: border-box;
-    background-color: rgba(255,255,255,.4);
+    background-color: var(--grey);
     font-size: 16px;
     color: rgba(0,0,0,.8);
 }
@@ -288,7 +288,7 @@ input[type=submit]:hover {
 }
 
 input::-webkit-input-placeholder {
-    color: rgba(75,75,75,.4); !important;
+    color: rgba(75,75,75,.4) !important;
 }
  
 input:-moz-placeholder { /* Firefox 18- */
@@ -429,24 +429,54 @@ nav {
 
 }
 
-#pictures {
+#podcast_action{
+    margin:0 0 0 240px;
+    padding: 64px;
+    float: left;
+}
+
+#podcast_comedy{
+    margin: 0;
+    padding: 64px;
+    float: left;
+}
+
+#videos {
     background-image: url(img/cleveland_playhouse.png);
+    background-size: cover;
+
+
+}
+
+#pictures {
+    background-image: url(img/spotlight.png);
     background-size: cover;
 
 }
 
-#videos {
-    background-image: url(img/spotlight.png);
-    background-size: cover;
+#picture_album {
+    margin: 0 0 0 240px;
+    padding: 15vh 18.8vw;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+    justify-content: center;
+}
 
-
+.picture_thumb {
+    width: 200px;
+    height: 160px;
+    background-color: white;
 }
 
 #book {
     background-image: url(img/stage_curtain.png);
     background-size: cover;
+}
 
-
+#form_container {
+    margin: 0 0 0 240px;
+    padding: 10vh 15vw;
 }
 
 #bio_content_container {
