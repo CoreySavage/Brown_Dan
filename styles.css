@@ -310,6 +310,14 @@ table, th, td {
     text-align: center;
 }
 
+th {
+    font-weight: 500;
+}
+
+td {
+    font-weight: 300;
+}
+
 /************************************************************************************
  *
  *      Webpage Styles 
@@ -439,19 +447,16 @@ nav {
     text-align: center;
 }
 
-#shows_content_container {
-    text-align: center;
-    margin: 0 0 0 240px;
-    padding: 12vh 0;
-}
-
 #shows_table {
+    flex-basis: 68%;
+    max-width: 800px;
+    min-width: 400px;
     display: inline-block;
-    width: 680px;
     background-color: rgba(0,0,0,.38);
     border: 1px solid rgba(0,0,0,.6);
     border-radius: 15px;
-    height: 600px;
+    max-height: 720px;
+    min-height: 512px;
 }
 
 #shows_table_content {
