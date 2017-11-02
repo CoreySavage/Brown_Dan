@@ -310,6 +310,14 @@ table, th, td {
     text-align: center;
 }
 
+th {
+    font-weight: 500;
+}
+
+td {
+    font-weight: 300;
+}
+
 /************************************************************************************
  *
  *      Webpage Styles 
@@ -439,19 +447,16 @@ nav {
     text-align: center;
 }
 
-#shows_content_container {
-    text-align: center;
-    margin: 0 0 0 240px;
-    padding: 12vh 0;
-}
-
 #shows_table {
+    flex-basis: 68%;
+    max-width: 800px;
+    min-width: 400px;
     display: inline-block;
-    width: 680px;
     background-color: rgba(0,0,0,.38);
     border: 1px solid rgba(0,0,0,.6);
     border-radius: 15px;
-    height: 600px;
+    max-height: 720px;
+    min-height: 512px;
 }
 
 #shows_table_content {
@@ -468,11 +473,6 @@ nav {
 #podcast {
     background-image: url(img/action_figure.png);
     background-size: cover;
-}
-
-#podcast_content_container {
-    height: 100%;
-    padding: 16px;
 }
 
 /*
@@ -604,37 +604,22 @@ nav {
     align-items: center;
 }
 
-.video_full_flexbox_container {
+.full_flexbox_container {
     flex-basis: 100%;
     display: flex;
     justify-content: center;
 }
 
-.video_half_flexbox_container {
+.half_flexbox_container {
     flex-basis: 50%;
     display: flex;
     justify-content: center;
 }
 
-
-.podcast_full_container {
-    position: relative;
-    height: 0;
-}
-
-.podcast_half_container {
-    margin: 0;
-    max-width: 200px;
-}
-
 .half_resizer {
-    width: 100%;
-    position: absolute;
-    max-width: 512px;
-    padding: 0 8px;
-    display: inline-block;
-    top: 0;
-    left: 0;
+    max-width: 560px;
+    flex-basis: 50%;
+    padding: 8px;
 }
 
 .full_resizer {
@@ -643,34 +628,10 @@ nav {
     padding: 8px;
 }
 
-.podcast_full_resizer {
-    width: 40%;
-    position: relative;
-    display: inline-block;
-    max-width: 512px;
-    padding: 0 32px;
-    top: 18%;
-    left: 4%;
-}
-
 .quarter_resizer {
-    width: 20%;
-    position: relative;
-    display: inline-block;
-    max-width: 512px;
-    padding: 0 32px;
-    bottom: 20%;
-    left: 8%;
-}
-
-.threefourths_resizer {
-    width: 40%;
-    position: relative;
-    display: inline-block;
-    max-width: 512px;
-    padding: 0 32px;
-    top: 0;
-    left: 0;
+    max-width: 560px;
+    flex-basis: 25%;
+    padding: 8px;
 }
 
 .embed {
