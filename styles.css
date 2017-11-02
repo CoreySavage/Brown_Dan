@@ -180,7 +180,7 @@ sub { bottom: -0.25em; }
 }
 
 .label {
-    font-size: 4vmin;
+    font-size: 1vmin;
     margin: 1vh 0 2vh;
     text-align: center;
     text-align: -webkit-center;
@@ -188,7 +188,7 @@ sub { bottom: -0.25em; }
 }
 
 label {
-    font-size: 18px;
+    font-size: 16px;
 } 
 
 .greeting {
@@ -240,31 +240,42 @@ svg:not(:root) { overflow: hidden; }
  *      Forms
  */
 
+#form_container {
+    margin: 0 0 0 240px;
+    height: 100vh;
+    min-height: 512px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    flex-basis: 80%;
+}
 
 input[type=text], input[type=email], select, textarea {
-    padding: 12px 20px;
-    margin: 8px 0;
+    padding: 8px 16px;
+    margin: 4px 0 8px;
     display: inline-block;
     border: 1px solid var(--black);
     border-radius: 4px;
     box-sizing: border-box;
-    background-color: var(--grey);
-    font-size: 16px;
-    color: rgba(0,0,0,.8);
+    background-color: rgba(117,117,117,.72);
+    font-size: 14px;
+    color: rgba(255,255,255,.8);
 }
 
 .short_input {
-    width: 40%;
-    max-width: 320px;
+    width: 32%;
+    min-width: 208px;
 }
 
 .long_input{
     width: 100%;
-    max-width: 800px;
 }
 
 textarea {
-    height: 15vh;
+    height: 18vh;
     resize: none;
 }
 
@@ -273,9 +284,10 @@ input:focus, textarea:focus {
 }
 
 input[type=submit] {
+    float: right;
     background-color: var(--blue);
-    color: white;
-    padding: 14px 20px;
+    color: #ffffff;
+    padding: 8px 24px;
     margin: 8px 0;
     border: none;
     border-radius: 4px;
@@ -288,19 +300,19 @@ input[type=submit]:hover {
 }
 
 input::-webkit-input-placeholder {
-    color: rgba(75,75,75,.4) !important;
+    color: rgba(195,195,195,.4) !important;
 }
  
 input:-moz-placeholder { /* Firefox 18- */
-    color: rgba(75,75,75,.4) !important;  
+    color: rgba(195,195,195,.4) !important;  
 }
  
 input::-moz-placeholder {  /* Firefox 19+ */
-    color: rgba(75,75,75,.4) !important;  
+    color: rgba(195,195,195,.4) !important;  
 }
  
 input:-ms-input-placeholder {  
-    color: rgba(75,75,75,.4) !important;  
+    color: rgba(195,195,195,.4) !important;  
 }
 
 
@@ -429,16 +441,26 @@ nav {
 
 }
 
-#podcast_action{
-    margin:0 0 0 240px;
-    padding: 64px;
-    float: left;
+#podcast_lettering {
+    margin: 0 0 0 248px;
+    padding: 4vw;
 }
 
-#podcast_comedy{
-    margin: 0;
-    padding: 64px;
-    float: left;
+#podcast_action {
+    position: absolute;
+
+}
+
+#podcast_comedy {
+    position: absolute;
+}
+
+#podcast_nerd {
+    position: absolute;
+}
+
+#podcast_show {
+    position: absolute;
 }
 
 #videos {
@@ -459,8 +481,8 @@ nav {
     padding: 15vh 18.8vw;
     display: flex;
     flex-wrap: wrap;
-    max-width: 800px;
     justify-content: center;
+    min-width: 800px;
 }
 
 .picture_thumb {
@@ -472,11 +494,6 @@ nav {
 #book {
     background-image: url(img/stage_curtain.png);
     background-size: cover;
-}
-
-#form_container {
-    margin: 0 0 0 240px;
-    padding: 10vh 15vw;
 }
 
 #bio_content_container {
