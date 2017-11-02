@@ -257,10 +257,10 @@ input[type=text], input[type=email], select, textarea {
     padding: 8px 16px;
     margin: 4px 0 8px;
     display: inline-block;
-    border: 1px solid var(--black);
+    border: 1px solid rgba(0,0,0,.9);
     border-radius: 4px;
     box-sizing: border-box;
-    background-color: rgba(117,117,117,.72);
+    background-color: rgba(40,40,40,.95);
     font-size: 14px;
     color: rgba(255,255,255,.8);
 }
@@ -300,19 +300,19 @@ input[type=submit]:hover {
 }
 
 input::-webkit-input-placeholder {
-    color: rgba(195,195,195,.4) !important;
+    color: rgba(185,185,185,.4) !important;
 }
  
 input:-moz-placeholder { /* Firefox 18- */
-    color: rgba(195,195,195,.4) !important;  
+    color: rgba(185,185,185,.4) !important;  
 }
  
 input::-moz-placeholder {  /* Firefox 19+ */
-    color: rgba(195,195,195,.4) !important;  
+    color: rgba(185,185,185,.4) !important;  
 }
  
 input:-ms-input-placeholder {  
-    color: rgba(195,195,195,.4) !important;  
+    color: rgba(185,185,185,.4) !important;  
 }
 
 
@@ -476,9 +476,17 @@ nav {
 
 }
 
-#picture_album {
+#picture_container {
     margin: 0 0 0 240px;
-    padding: 15vh 18.8vw;
+    display: flex;
+    height: 100vh;
+    min-height: 512px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#photo_album {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -486,7 +494,7 @@ nav {
 }
 
 .picture_thumb {
-    width: 200px;
+    width: 25%;
     height: 160px;
     background-color: white;
 }
