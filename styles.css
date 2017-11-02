@@ -31,9 +31,11 @@ audio:not([controls]) { display: none; }
 }
 
 
-/*
+/************************************************************************************
+ *
  *      Base 
- */
+ *
+ ***********************************************************************************/
 
 html, body {
     width: 100%;
@@ -312,8 +314,11 @@ table, th, td {
 
 }
 
-
-
+/************************************************************************************
+ *
+ *      Webpage Styles 
+ *
+ ***********************************************************************************/
 
 /*
  *      Nav
@@ -367,7 +372,6 @@ nav {
 #nav_container a {
     padding: 8px 0;
     font-size: 18px;
-
 }
 
 #nav_container a:hover {
@@ -375,9 +379,8 @@ nav {
 
 }
 
-
 /*
- *     Page Containers
+ *     Site-wide Classes
  */
 
 .page_background {
@@ -396,16 +399,38 @@ nav {
     align-items: center;
 }
 
+/*
+ *      Bio
+ */
+
+
 #bio {
     background-image: url(img/microphone.png);
     background-size: cover;
 }
 
+#bio h1 {
+    flex-basis: 70%;
+    max-width: 520px;
+    font-weight: 100;
+}
+
+#bio_text_box {
+    flex-basis: 60%;
+    max-width: 512px;
+    font-size: 16px;
+    font-weight: 200;
+    text-align: center;
+    padding: 0 32px;
+}
+
+/*
+ *      Shows
+ */
+
 #shows {
     background-image: url(img/cleveland_flats.png);
     background-size: cover;
-
-
 }
 
 #shows h1 {
@@ -434,17 +459,130 @@ nav {
     margin: 4px 4%;
 }
 
+/*
+ *      Podcasts
+ */
+
 #podcast {
     background-image: url(img/action_figure.png);
     background-size: cover;
-
 }
 
+/*
+ *      Videos
+ */
 
 #videos {
     background-image: url(img/cleveland_playhouse.png);
     background-size: cover;
 }
+
+/*
+ *      Pictures
+ */
+
+#pictures {
+    background-image: url(img/spotlight.png);
+    background-size: cover;
+}
+
+#photo_album {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-width: 800px;
+}
+
+.picture_thumb {
+    width: 25%;
+    height: 160px;
+    background-color: white;
+}
+
+/*
+ *      Booking
+ */
+
+#book {
+    background-image: url(img/stage_curtain.png);
+    background-size: cover;
+}
+
+/************************************************************************************
+ *
+ *      Responsive Design 
+ *
+ ***********************************************************************************/
+
+@media only screen and (max-width: 1440px) {
+     /* start of large tablet styles */
+
+
+}
+
+@media only screen and (max-width: 898px) {
+    
+    .container_data {
+        font-size: 12px;
+     }    
+
+}
+
+@media only screen and (max-width: 540px) {
+     .container_data {
+        font-size: 10px;
+     }
+
+}
+
+@media only screen and (max-height: 720px) {
+    
+    .container_data {
+        font-size: 1.8vmin;
+     }    
+
+}
+
+@media only screen and (max-height: 540px) {
+    
+    .container_data {
+        font-size: 2vmin;
+     }    
+
+}
+
+/************************************************************************************
+ *
+ *      Print Styles and Helper Classes 
+ *
+ ***********************************************************************************/
+
+/*
+ *      Print Styles
+ */
+
+/*Inlined to avoid required HTTP connection: h5bp.com/r*/
+@media print {
+  * { background: transparent !important; color: black !important; box-shadow:none !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: h5bp.com/s */
+  /* a, a:visited { text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; } /* h5bp.com/t */
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+  
+  canvas { display: none; }
+}
+
+
+/*
+ *      Helper Classes
+ */
 
 .page_container_resize {
     height: 100vh;
@@ -458,8 +596,6 @@ nav {
     flex-wrap: wrap;
     align-items: center;
 }
-
-
 
 .full_flexbox_container {
     flex-basis: 100%;
@@ -512,125 +648,6 @@ nav {
 .align_start {
     align-self: flex-start;
 }
-
-#pictures {
-    background-image: url(img/spotlight.png);
-    background-size: cover;
-
-}
-
-#picture_container {
-    margin: 0 0 0 240px;
-    display: flex;
-    height: 100vh;
-    min-height: 512px;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-#photo_album {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    min-width: 800px;
-}
-
-.picture_thumb {
-    width: 25%;
-    height: 160px;
-    background-color: white;
-}
-
-#book {
-    background-image: url(img/stage_curtain.png);
-    background-size: cover;
-}
-
-#bio h1 {
-    flex-basis: 70%;
-    max-width: 520px;
-    font-weight: 100;
-}
-
-#bio_text_box {
-    flex-basis: 60%;
-    max-width: 512px;
-    font-size: 16px;
-    font-weight: 200;
-    text-align: center;
-    padding: 0 32px;
-}
-
-
-/*
- *      Responsive Design
- */
-
-@media only screen and (max-width: 1440px) {
-     /* start of large tablet styles */
-
-
-}
-
-@media only screen and (max-width: 898px) {
-    
-    .container_data {
-        font-size: 12px;
-     }    
-
-}
-
-@media only screen and (max-width: 540px) {
-     .container_data {
-        font-size: 10px;
-     }
-
-}
-
-@media only screen and (max-height: 720px) {
-    
-    .container_data {
-        font-size: 1.8vmin;
-     }    
-
-}
-
-@media only screen and (max-height: 540px) {
-    
-    .container_data {
-        font-size: 2vmin;
-     }    
-
-}
-
-
-/*
- *      Print Styles
- */
-
-/*Inlined to avoid required HTTP connection: h5bp.com/r*/
-@media print {
-  * { background: transparent !important; color: black !important; box-shadow:none !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: h5bp.com/s */
-  /* a, a:visited { text-decoration: underline; }
-  a[href]:after { content: " (" attr(href) ")"; }
-  abbr[title]:after { content: " (" attr(title) ")"; }
-  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
-  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
-  thead { display: table-header-group; } /* h5bp.com/t */
-  tr, img { page-break-inside: avoid; }
-  img { max-width: 100% !important; }
-  @page { margin: 0.5cm; }
-  p, h2, h3 { orphans: 3; widows: 3; }
-  h2, h3 { page-break-after: avoid; }
-  
-  canvas { display: none; }
-}
-
-
-/*
- *      Helper Classes
- */
 
 /* For image replacement */
 .ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; *line-height: 0; }
