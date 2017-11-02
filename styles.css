@@ -198,7 +198,6 @@ label {
  *      Embedded Content
  */
 
-
 /*
  * Improve image quality when scaled in IE7: h5bp.com/d
  * Remove the gap between images and borders on image containers: h5bp.com/e
@@ -230,7 +229,6 @@ svg:not(:root) { overflow: hidden; }
 .close_bttn:hover polygon {
     fill-opacity: 0.9;
 }
-
 
 /*
  *      Forms
@@ -302,7 +300,6 @@ input:-ms-input-placeholder { 
     color: rgba(185,185,185,.4) !important;  
 }
 
-
 /*
  *     Tables
  */
@@ -311,7 +308,6 @@ table, th, td {
     color: var(--grey_text);
     padding: 4px;
     text-align: center;
-
 }
 
 /************************************************************************************
@@ -403,20 +399,26 @@ nav {
  *      Bio
  */
 
-
 #bio {
     background-image: url(img/microphone.png);
     background-size: cover;
 }
 
+#bio_content {
+    padding: 0 0 0 20vw;
+
+}
+
+#bio div {
+    flex-direction: column;
+}
+
 #bio h1 {
-    flex-basis: 70%;
     max-width: 520px;
     font-weight: 100;
 }
 
 #bio_text_box {
-    flex-basis: 60%;
     max-width: 512px;
     font-size: 16px;
     font-weight: 200;
