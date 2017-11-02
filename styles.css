@@ -234,15 +234,6 @@ svg:not(:root) { overflow: hidden; }
  *      Forms
  */
 
-#form_container {
-    margin: 0 0 0 240px;
-    height: 100vh;
-    min-height: 512px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 form {
     flex-basis: 80%;
 }
@@ -317,6 +308,7 @@ input:-ms-input-placeholder { 
 table, th, td {
     color: var(--grey_text);
     padding: 4px;
+    text-align: center;
 
 }
 
@@ -388,10 +380,20 @@ nav {
  *     Page Containers
  */
 
-.page_container {
+.page_background {
     width: 100%;
     height: 100vh;
     min-height: 512px;
+}
+
+.page_container {
+    height: 100vh;
+    min-height: 512px;
+    margin: 0 0 0 240px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 #bio {
@@ -404,6 +406,10 @@ nav {
     background-size: cover;
 
 
+}
+
+#shows h1 {
+    text-align: center;
 }
 
 #shows_content_container {
@@ -434,83 +440,77 @@ nav {
 
 }
 
-#podcast_lettering {
-    margin: 0 0 0 248px;
-    padding: 4vw;
-}
-
-#podcast_action {
-    position: absolute;
-
-}
-
-#podcast_comedy {
-    position: absolute;
-}
-
-#podcast_nerd {
-    position: absolute;
-}
-
-#podcast_show {
-    position: absolute;
-}
 
 #videos {
     background-image: url(img/cleveland_playhouse.png);
     background-size: cover;
 }
 
-#videos_container {
+.page_container_resize {
     height: 100vh;
     min-height: 512px;
     margin: 0 0 0 240px;
 }
 
-#videos_flexbox {
-    height: 100vh;
-    min-height: 512px;
+.page_content_flexbox {
+    height: 100%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
 }
 
-.top_flexbox_container {
+
+
+.full_flexbox_container {
     flex-basis: 100%;
     display: flex;
     justify-content: center;
 }
 
-.bottom_flexbox_container {
+.half_flexbox_container {
     flex-basis: 50%;
     display: flex;
     justify-content: center;
 }
 
-.top_video_resizer {
+.half_resizer {
     max-width: 560px;
     flex-basis: 50%;
     padding: 8px;
 }
 
-.bottom_video_resizer {
+.full_resizer {
     max-width: 560px;
     flex-basis: 100%;
     padding: 8px;
 }
 
-.video_embed {
+.quarter_resizer {
+    max-width: 560px;
+    flex-basis: 25%;
+    padding: 8px;
+}
+
+.embed {
     position: relative;
     padding: 0 0 56.25% 0;
     height: 0;
 }
 
-.video_embed iframe {
+.embed iframe, .embed svg {
     position: absolute;
     top: 0px;
     left: 0px;
     width:100%;
     height: 100%;
+}
+
+.align_end {
+    align-self: flex-end;
+}
+
+.align_start {
+    align-self: flex-start;
 }
 
 #pictures {
@@ -547,25 +547,19 @@ nav {
     background-size: cover;
 }
 
-#bio_content_container {
-        position: absolute;
-    right: 12%;
-    top: 22%;
-    width: 680px;
-    color: var(--grey_text);
-    font-weight: 100;
-}
-
-#bio_content_container h2 {
+#bio h1 {
+    flex-basis: 70%;
+    max-width: 520px;
     font-weight: 100;
 }
 
 #bio_text_box {
-    width: 600px;
+    flex-basis: 60%;
+    max-width: 512px;
     font-size: 16px;
     font-weight: 200;
     text-align: center;
-    padding: 8px 0 8px 56px;
+    padding: 0 32px;
 }
 
 
