@@ -401,14 +401,47 @@ nav {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    8px;
 }
 
 /*
  *     Home
  */
 #home {
-    background-color: blue;
-    
+    background-color: rgba(47, 60, 69, 1);   
+}
+
+#home div {
+    justify-content: flex-end;
+}
+
+.home_flexbox_container {
+    height: 80%;
+    flex-basis: 30%;
+    max-width: 480px;
+    min-width: 320px;
+    min-height: 512px; 
+}
+
+#twitter_wrapper {
+    height: 90%;
+    width: 100%;
+    background-color: rgba(20,20,20,.4);
+    border-left: 2px solid rgba(80,90,97,.6);
+    border-bottom: 2px solid rgba(80,90,97,.6);
+}
+
+#twitter_header {
+    text-align: center;
+    padding: 8px 0;
+    background-color: rgba(20,20,20,.4);
+    border-top: 2px solid rgba(80,90,97,.6);
+    border-left: 2px solid rgba(80,90,97,.6);
+    border-bottom: 1px solid rgba(80,90,97,.6);
+}
+
+.twitter-timeline {
+    background: rgba(0,0,0,0);
 }
 
 
