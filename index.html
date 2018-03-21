@@ -6,7 +6,6 @@
         <link rel="stylesheet" href="styles.css">
         <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700" rel="stylesheet">
         <link rel="shortcut icon" type="image/x-icon" href="data:image/vnd.microsoft.icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAAAAPQAAAB0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAFgAAAAoAAAAAAAAAAAAAAAAAAAAAAAAAtQAAAP8AAAD/AAAA7AAAAJsAAABFAAAAAAAAAAAAAAAAAAAA4gAAAP8AAAD/AAAA3wAAAHcAAAABAAAAAAAAAL8AAACLAAAAJAAAAFkAAADEAAAA7wAAAEUAAAAAAAAAAAAAAOwAAAB0AAAAPQAAAHsAAADxAAAAeAAAAAAAAAC/AAAAhQAAAAAAAAAAAAAAAgAAAMAAAADBAAAAJAAAAAAAAADsAAAAVwAAAAAAAAAAAAAAfwAAANkAAAAAAAAAvwAAAIUAAAAAAAAAAAAAAAAAAAA4AAAA/wAAAEkAAAAAAAAA7AAAAFcAAAAAAAAAAwAAAKgAAAC9AAAAAAAAAL8AAACFAAAAAAAAAAAAAAAAAAAARQAAAPwAAABWAAAAAAAAAOwAAADIAAAApQAAAN8AAADsAAAANwAAAAAAAAC/AAAAhQAAAAAAAAAAAAAAAAAAAC0AAAD/AAAALQAAAAAAAADsAAAAzwAAAL4AAAD6AAAAuAAAAAMAAAAAAAAAvwAAAIUAAAAAAAAAAAAAAAAAAAB0AAAA7QAAAAUAAAAAAAAA7AAAAFcAAAAAAAAAJgAAAO8AAABWAAAASAAAANcAAACFAAAAAAAAAAAAAABgAAAA+AAAAHIAAAAAAAAAJAAAAPEAAABXAAAAAAAAAAAAAADNAAAAfgAAAKkAAAD/AAAA6AAAAMAAAADqAAAA/wAAAJUAAAAFAAAAAAAAAKoAAAD/AAAAlgAAAEIAAACIAAAA/gAAADoAAAACAAAARwAAAIAAAACVAAAAcQAAADcAAAAAAAAAAAAAAAAAAAAVAAAAkQAAAOYAAAD/AAAA3gAAAFwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAP//AAD//wAAg8MAAJndAACc3gAAntwAAJ7BAACewQAAnt0AAJ3dAAABiQAAz8MAAP//AAD//wAA//8AAA==" />
-        <script src="scripts.js"></script>
     </head>
     <body>
         <div id="navbar_container">
@@ -23,6 +22,7 @@
                 </nav>
             </div>
         </div>
+        
          <div class="page_background" id="bio">
             <div class="page_container">
                 <div id="bio_content">
@@ -110,6 +110,127 @@
         </div>
         <div class="page_background" id="pictures">
             <div class="page_container">
+
+                <div id="image_display_flexbox">
+                    <div id="image_display">
+                        <div id="display_container">
+                            <img src="" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div id="carousel_button_container">
+                    <button id="carousel_prev" onclick="carouselPrev()">
+                        <svg width="24px" height="24px" viewBox="0 0 490 490" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <desc>Arrow - Left</desc>
+                            <defs></defs>
+                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g id="left-arrow" fill-rule="nonzero" fill="rgba(15,15,15,.6)">
+                                    <path d="M245,0 C109.7,0 0,109.7 0,245 C0,380.3 109.7,490 245,490 C380.3,490 490,380.3 490,245 C490,109.7 380.3,0 245,0 Z M317.2,335.5 L274.5,378.2 L184,287.7 L141.3,245 L184,202.3 L274.5,111.8 L317.2,154.5 L226.8,245 L317.2,335.5 Z" id="Shape"></path>
+                                </g>
+                            </g>
+                        </svg>
+                    </button>
+                    <button id="carousel_prev_small" onclick="carouselPrev()">
+                        <svg width="16px" height="9vh" viewBox="0 0 10 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <desc>Created with Sketch.</desc>
+                            <defs></defs>
+                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.6">
+                                <path d="M0,0 L10,0 L10,40 L0,40 L0,0 Z M9.11687515,24.3468183 L4.80501606,20.0301895 L9.11687515,15.7135607 L7.0801895,13.676875 L2.76356065,17.9935038 L0.726875,20.0301895 L2.76356065,22.0668752 L7.0801895,26.383504 L9.11687515,24.3468183 Z" id="Path-2" fill="#0F0F0F"></path>
+                            </g>
+                        </svg>
+                    </button>
+                    <div id="carousel">   
+                        <div id="carousel_container">
+
+                            <div class="image_container">
+                                <div class="image_select">
+                                    <img src="img/album/0001.jpeg" alt="">
+                                </div>    
+                            </div>
+                            <div class="image_container">
+                                <div class="image_select">
+                                    <img src="img/album/0002.jpeg" alt="">
+                                </div>    
+                            </div>
+                            <div class="image_container">
+                                <div class="image_select">
+                                    <img src="img/album/0003.jpeg" alt="">
+                                </div>    
+                            </div>
+                            <div class="image_container">
+                                <div class="image_select">
+                                    <img src="img/album/0004.jpeg" alt="">
+                                </div>    
+                            </div>
+                            <div class="image_container">
+                                <div class="image_select">
+                                    <img src="img/album/0005.jpeg" alt="">
+                                </div>    
+                            </div>
+                            <div class="image_container">
+                                <div class="image_select">
+                                    <img src="img/album/0006.jpeg" alt="">
+                                </div>    
+                            </div>
+                            <div class="image_container">
+                                <div class="image_select">
+                                    <img src="img/album/0007.jpeg" alt="">
+                                </div>    
+                            </div>
+                            <div class="image_container">
+                                <div class="image_select">
+                                    <img src="img/album/0008.jpeg" alt="">
+                                </div>    
+                            </div>
+                            <div class="image_container">
+                                <div class="image_select">
+                                    <img src="img/album/0009.jpeg" alt="">
+                                </div>    
+                            </div>
+                            <div class="image_container">
+                                <div class="image_select">
+                                    <img src="img/album/0010.jpeg" alt="">
+                                </div>    
+                            </div>
+                            <div class="image_container">
+                                <div class="image_select">
+                                    <img src="img/album/0011.jpeg" alt="">
+                                </div>    
+                            </div>
+                            <div class="image_container">
+                                <div class="image_select">
+                                    <img src="img/album/0012.jpeg" alt="">
+                                </div>    
+                            </div>
+                    
+                        </div>
+                    </div>
+
+                    <button id="carousel_next" onclick="carouselNext()">
+                         <svg width="24px" height="24px" viewBox="0 0 490 490" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <desc>Arrow - Right</desc>
+                            <defs></defs>
+                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g id="right-arrow" transform="translate(245.000000, 245.000000) scale(-1, 1) translate(-245.000000, -245.000000) " fill-rule="nonzero" fill="rgba(15,15,15,.6)">
+                                    <path d="M245,0 C109.7,0 0,109.7 0,245 C0,380.3 109.7,490 245,490 C380.3,490 490,380.3 490,245 C490,109.7 380.3,0 245,0 Z M317.2,335.5 L274.5,378.2 L184,287.7 L141.3,245 L184,202.3 L274.5,111.8 L317.2,154.5 L226.8,245 L317.2,335.5 Z" id="Shape"></path>
+                                </g>
+                            </g>
+                        </svg>
+                    </button>
+                    <button id="carousel_next_small" onclick="carouselNext()">
+                        <svg width="16px" height="9vh" viewBox="0 0 10 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <desc>Created with Sketch.</desc>
+                            <defs></defs>
+                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.6">
+                                <g id="bar_arrow_left" transform="translate(5.000000, 20.000000) scale(-1, 1) translate(-5.000000, -20.000000) " fill-rule="nonzero" fill="#0F0F0F">
+                                    <path d="M0,0 L10,0 L10,40 L0,40 L0,0 Z M9.11687515,24.3468183 L4.80501606,20.0301895 L9.11687515,15.7135607 L7.0801895,13.676875 L2.76356065,17.9935038 L0.726875,20.0301895 L2.76356065,22.0668752 L7.0801895,26.383504 L9.11687515,24.3468183 Z" id="Path-2"></path>
+                                </g>
+                            </g>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>         
         <div class="page_background" id="book">
             <div class="page_container">
                 <form action="https://formspree.io/rainylemons44@gmail.com" method="POST">
@@ -133,7 +254,9 @@
                 </form>
             </div>
         </div>
+
     </body>
+<script src="scripts.js"></script>
 </html>
 
     

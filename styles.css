@@ -42,12 +42,12 @@ audio:not([controls]) { display: none; }
 
 html, body {
     width: 100%;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
 }
 
 html {
     font-size: 100%;
-    overflow-y: auto-webkit-text-size-adjust: 100%;
+    overflow-y: visible;
     -ms-text-size-adjust: 100%;
 }
 
@@ -198,7 +198,7 @@ label {
  * Improve image quality when scaled in IE7: h5bp.com/d
  * Remove the gap between images and borders on image containers: h5bp.com/e
  */
-img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; background-repeat: no-repeat; width: 100%; min-height: 100%; float: right;}
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; background-repeat: no-repeat; max-width: 100%; max-height: 100%; float: right;}
 
 /* Correct overflow not hidden in IE9 */
 svg:not(:root) { overflow: hidden; }
@@ -524,42 +524,96 @@ nav {
     background-size: cover;
 }
 
-#pictures .page_container {
-    flex-direction: column;
-}
-
-#photo_display {
-    height: 700px;
-    width: 90%;
-    background-color: var(--overlay);
-    border: 1px solid var(--border);
-}
-
-#photo_album {
+#image_display_flexbox, #image_display, #display_container, #carousel_button_container, .image_container, .image_select {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    min-width: 800px;
-    margin: 16px;
-    border: 1px solid var(--border);
-    background-color: var(--overlay);
-    width: 60%;
-    height: 160px;
+    align-items: center;
 }
 
-.picture_thumb {
-    width: 20%;
+#image_display, #carousel {
+    background-color: var(--overlay);
+    border: 1px solid var(--border);
+}
+
+#image_display_flexbox {
+    flex-basis: 100%;
+}
+
+#image_display {
+    min-height: 300px;
+    height: 70vh;
+    width: 800px;
+    margin: 1vh 0;
+}
+
+#display_container {
+    height: 90%;
+    width: 90%;
+}
+
+#carousel_button_container {
+    width: 100%;
+    flex-direction: row;
+}
+
+#carousel, #carousel_container, .image_container {
     height: 100px;
 }
 
-.picture_thumb img {
-    background-image: url(img/album/001.jpeg);
-    max-width: 100%;
-    max-height: 100%;
-    background-size: contain;
-    background-position: 50% 50%
+#carousel {
+    width: 720px;
+    margin: 8px 4px 0 4px;
 }
 
+
+#carousel_prev, #carousel_next {
+    margin: 16px 0 0 0;
+}
+
+#carousel_prev_small, #carousel_next_small {
+    display: none;
+    padding: 0;
+
+}
+
+#carousel_prev, #carousel_next, #carousel_prev_small, #carousel_next_small {
+    background-color: rgba(0,0,0,0);
+    border: none;
+}
+
+#carousel_prev:focus, #carousel_next:focus, #carousel_prev_small:focus, #carousel_next_small:focus {
+    outline: 0;
+}
+
+#carousel_container {
+    width: 720px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.image_container {
+    flex-basis: 16.6667%;
+    display: none;
+    flex-direction: column;
+}
+
+.image_select {
+    max-height: 80%;
+    max-width: 80%;
+    flex-direction: column;
+}
+
+#display_container img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.image_select img{
+    max-height: 90px;
+    max-width: 100%;
+}
 
 /*
  *      Booking
@@ -576,41 +630,92 @@ nav {
  *
  ***********************************************************************************/
 
-@media only screen and (max-width: 1440px) {
-     /* start of large tablet styles */
 
+@media only screen and (max-width: 816px) {
 
+    #image_display_flexbox {
+        align-self: flex-start;
+    }
+
+    #image_display {
+        min-height: 260px;
+        height: 75vh;
+        width: 96%;
+        margin: .75vh 0;
+    }
+
+    #display_container {
+        height: 94%;
+        width: 94%;
+    }
+
+    #carousel, #carousel_container, .image_container {
+        height: 80px;
+    }
+
+    #carousel {
+        flex-basis: 80%;
+        margin: 0;
+    }
+
+    #carousel_container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    #carousel_prev, #carousel_next {
+        flex-basis: 5%;
+        margin: 0;
+    }
+
+    .image_select img{
+        max-height: 70px;
+        max-width: 100%;
+    }
 }
 
-@media only screen and (max-width: 898px) {
-    
-    .container_data {
-        font-size: 12px;
-     }    
+@media only screen and (max-width: 640px) {
 
+    #image_display {
+        height: 89vh;
+        width: 100%;
+        margin: 0;
+    }
+
+    #display_container {
+        height: 96%;
+        width: 96%;
+    }
+
+    #carousel, #carousel_container, .image_container {
+        height: 9vh;
+    }
+
+    #carousel {
+        flex-basis: 90%;
+    }
+
+    #carousel_prev, #carousel_next {
+        display: none;
+    }
+
+    #carousel_prev_small, #carousel_next_small {
+        display: inline-flex;
+    }
+
+    .image_select img{
+        max-height: 8.2vh;
+        max-width: 100%;
+    }
 }
 
-@media only screen and (max-width: 540px) {
-     .container_data {
-        font-size: 10px;
-     }
-
-}
-
-@media only screen and (max-height: 720px) {
-    
-    .container_data {
-        font-size: 1.8vmin;
-     }    
-
-}
-
-@media only screen and (max-height: 540px) {
-    
-    .container_data {
-        font-size: 2vmin;
-     }    
-
+@media only screen and (max-width: 640px) and (max-height: 720px)  {
+    #carousel_prev_small, #carousel_next_small {
+        width: 12px;
+    }
 }
 
 /************************************************************************************
