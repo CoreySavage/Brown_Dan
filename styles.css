@@ -20,13 +20,16 @@ audio:not([controls]) { display: none; }
  */
 
 :root {
-  --blue: #5B82E1;
+  --blue: #448aff;
   --red: #EA626E;
   --green: #5CEBB5;
   --purple: #D58CDC;
   --orange: #FFD77E;
   --grey: rgba(175,175,175,.75);
   --grey_text: rgba(175,175,175,.9);
+  --white_text: rgba(255,255,255,.75);
+  --overlay: rgba(15,15,15,.6);
+  --border: rgba(0,0,0,.25);
   --black: rgba(0,0,0,.6);
 }
 
@@ -171,7 +174,7 @@ sub { bottom: -0.25em; }
 .label, label {
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
-    color: #ffffff;
+    color: var(--white_text);
     letter-spacing: .06em;
 }
 
@@ -186,13 +189,6 @@ sub { bottom: -0.25em; }
 label {
     font-size: 16px;
 } 
-
-.greeting {
-    font-family: 'Montserrat', sans-serif;
-    color: rgba(0,0,0,.6);
-    margin: 0 0 1vh;
-    letter-spacing: .06em;
-}
 
 /*
  *      Embedded Content
@@ -242,12 +238,12 @@ input[type=text], input[type=email], select, textarea {
     padding: 8px 16px;
     margin: 4px 0 8px;
     display: inline-block;
-    border: 1px solid rgba(0,0,0,.9);
     border-radius: 4px;
     box-sizing: border-box;
-    background-color: rgba(40,40,40,.95);
     font-size: 14px;
-    color: rgba(255,255,255,.8);
+    border: 1px solid var(--border);
+    background-color: var(--overlay);
+    color: var(--white_text);
 }
 
 .short_input {
@@ -274,14 +270,24 @@ input[type=submit] {
     color: #ffffff;
     padding: 8px 24px;
     margin: 8px 0;
-    border: none;
-    border-radius: 4px;
+    border-radius: 10px;
+    border-width: 2px;
+    border-color: #ffffff;
     cursor: pointer;
     font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 1px;
 }
 
 input[type=submit]:hover {
-    background-color: #5072C5;
+    background-color: rgba(0,0,0,0);
+    font-weight: 400;
+}
+
+input[type=submit]:active {
+    background-color: rgba(0,0,0,0);
+    border-color: rgba(160,160,160,.8);
+    color: rgba(160,160,160,.9);
 }
 
 input::-webkit-input-placeholder {
@@ -335,9 +341,9 @@ td {
     height: 100vh;
     display: table;
     text-align: center;
-    border-right: 2px solid rgba(155,155,155,.4);
-    background-color: rgba(183,183,183,.95);
-    color: var(--black);
+    border-right: 1px solid var(--border);
+    background-color: var(--overlay);
+    color: var(--white_text);
 }
 
 #nav_name {
@@ -354,6 +360,7 @@ td {
     position: absolute;
     width: 100%;
     margin: 46px 0 0;
+    color: var(--white_text);
 }
 
 #nav_container {
@@ -369,7 +376,7 @@ nav {
 
 #navbar_container a {
     z-index: 1;
-    color: var(--black);
+    color: var(--white_text);
     font-weight: 400;
 }
 
@@ -379,7 +386,8 @@ nav {
 }
 
 #nav_container a:hover {
-    background-color: rgba(203,203,203,1);
+    background-color: rgba(20,20,20,.8);
+    color: rgba(255,255,255,.9)
 
 }
 
@@ -401,13 +409,13 @@ nav {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    8px;
 }
 
 /*
  *     Home
  */
 #home {
+    background-image: url(img/wall.png);
     background-color: rgba(47, 60, 69, 1);   
 }
 
@@ -415,42 +423,22 @@ nav {
     justify-content: flex-end;
 }
 
-.home_flexbox_container {
-    height: 80%;
-    flex-basis: 30%;
-    max-width: 480px;
-    min-width: 320px;
-    min-height: 512px; 
-}
-
-#twitter_wrapper {
-    height: 90%;
-    width: 100%;
-    background-color: rgba(20,20,20,.4);
-    border-left: 2px solid rgba(80,90,97,.6);
-    border-bottom: 2px solid rgba(80,90,97,.6);
-}
-
-#twitter_header {
+#home_content {
+    flex-basis: 70%;
     text-align: center;
-    padding: 8px 0;
-    background-color: rgba(20,20,20,.4);
-    border-top: 2px solid rgba(80,90,97,.6);
-    border-left: 2px solid rgba(80,90,97,.6);
-    border-bottom: 1px solid rgba(80,90,97,.6);
 }
 
-.twitter-timeline {
-    background: rgba(0,0,0,0);
+#landing_title {
+    font-size: 8vmin;
+    font-weight: 500;
 }
-
 
 /*
  *      Bio
  */
 
 #bio {
-    background-image: url(img/microphone.png);
+    background-image: url(img/wall.png);
     background-size: cover;
 }
 
@@ -473,7 +461,8 @@ nav {
     font-size: 16px;
     font-weight: 200;
     text-align: center;
-    padding: 0 32px;
+    padding: 16px 32px;
+    background-color: rgba(30,30,30,.6);
 }
 
 /*
@@ -481,7 +470,7 @@ nav {
  */
 
 #shows {
-    background-image: url(img/cleveland_flats.png);
+    background-image: url(img/cleveland_night.png);
     background-size: cover;
 }
 
@@ -494,8 +483,8 @@ nav {
     max-width: 800px;
     min-width: 400px;
     display: inline-block;
-    background-color: rgba(0,0,0,.38);
-    border: 1px solid rgba(0,0,0,.6);
+    background-color: var(--overlay);
+    border: 1px solid var(--border);
     border-radius: 15px;
     max-height: 720px;
     min-height: 512px;
@@ -535,25 +524,49 @@ nav {
     background-size: cover;
 }
 
+#pictures .page_container {
+    flex-direction: column;
+}
+
+#photo_display {
+    height: 700px;
+    width: 90%;
+    background-color: var(--overlay);
+    border: 1px solid var(--border);
+}
+
 #photo_album {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     min-width: 800px;
+    margin: 16px;
+    border: 1px solid var(--border);
+    background-color: var(--overlay);
+    width: 60%;
+    height: 160px;
 }
 
 .picture_thumb {
-    width: 25%;
-    height: 160px;
-    background-color: white;
+    width: 20%;
+    height: 100px;
 }
+
+.picture_thumb img {
+    background-image: url(img/album/001.jpeg);
+    max-width: 100%;
+    max-height: 100%;
+    background-size: contain;
+    background-position: 50% 50%
+}
+
 
 /*
  *      Booking
  */
 
 #book {
-    background-image: url(img/stage_curtain.png);
+    background-image: url(img/curtain2.jpg);
     background-size: cover;
 }
 
@@ -650,12 +663,16 @@ nav {
     flex-basis: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 50%;
 }
 
 .half_flexbox_container {
+    height: 50%;
     flex-basis: 50%;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .half_resizer {
@@ -665,7 +682,7 @@ nav {
 }
 
 .full_resizer {
-    max-width: 560px;
+    max-width: 720px;
     flex-basis: 100%;
     padding: 8px;
 }
@@ -686,7 +703,7 @@ nav {
     position: absolute;
     top: 0px;
     left: 0px;
-    width:100%;
+    width: 100%;
     height: 100%;
 }
 
