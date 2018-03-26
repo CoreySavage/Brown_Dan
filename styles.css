@@ -501,7 +501,7 @@ nav {
 
 .page_container_resize {
     height: 100vh;
-    min-height: 512px;
+    min-height: 650px;
     margin: 0 0 0 240px;
 }
 
@@ -640,6 +640,7 @@ nav {
 #videos {
     background-image: url(img/cleveland_playhouse.png);
     background-size: cover;
+    min-height: 650px;
 }
 
 /*
@@ -760,22 +761,23 @@ nav {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
 }
 
 .full_flexbox_container {
-    flex-basis: 100%;
+    flex-basis: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50%;
+    height: 60%;
 }
 
 .half_flexbox_container {
-    height: 50%;
+    height: 40%;
     flex-basis: 50%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .half_resizer {
@@ -784,8 +786,14 @@ nav {
     padding: 8px;
 }
 
-.full_resizer {
-    max-width: 720px;
+.main_resizer {
+    max-width: 640px;
+    flex-basis: 100%;
+    padding: 8px;
+}
+
+.secondary_resizer {
+    max-width: 416px;
     flex-basis: 100%;
     padding: 8px;
 }
@@ -872,7 +880,23 @@ nav {
 
     .full_flexbox_container, .half_flexbox_container {
         flex-basis: 75%;
-        height: 33%;
+        height: 30%;
+    }
+
+    .half_flexbox_container {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .main_resizer {
+        max-width: 416px;
+    }
+
+}
+
+@media only screen and (max-width: 960px) and (max-height: 720px) {
+    .main_resizer, .secondary_resizer {
+        max-width: 384px;
     }
 
 }
@@ -925,9 +949,13 @@ nav {
     /*
      *      Video
      */
-    
+
     .page_content_flexbox {
         justify-content: center;
+    }
+
+    .main_resizer {
+
     }
 
     .full_flexbox_container, .half_flexbox_container {
@@ -937,6 +965,10 @@ nav {
 }
 
 @media only screen and (max-width: 640px) {
+
+    form {
+        flex-basis: 96%;
+    }
 
     .page_container, .page_container_resize {
         margin: 0;
