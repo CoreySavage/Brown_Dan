@@ -1,3 +1,21 @@
+function mobileMenuOpen() {
+    document.getElementById("nav_mobile_container").style.width = "144px"
+    document.getElementById("nav_mobile_container").style.height = "144px"
+    document.getElementById("nav_mobile_container").style.borderRadius = "4px"
+    document.getElementById("nav_mobile_button").style.display = "none"
+    document.getElementById("nav_mobile_links").style.display = "table-cell"
+}
+
+function mobileMenuClose() {
+    document.getElementById("nav_mobile_container").style.width = "32px"
+    document.getElementById("nav_mobile_container").style.height = "32px"
+    document.getElementById("nav_mobile_container").style.borderRadius = "16px"
+    document.getElementById("nav_mobile_button").style.display = "block"
+    document.getElementById("nav_mobile_links").style.display = "none"
+}
+
+
+
 const image_container_array = document.getElementsByClassName("image_container")
 const image_select_array = document.getElementsByClassName("image_select")
 const carousel_size = 6
