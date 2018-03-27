@@ -1,5 +1,5 @@
 /*
- *  Personal_Website
+ *  Dan Brown Comedy
  *  Stylesheet - styles.css
  *  
  *  Corey Savage
@@ -433,6 +433,7 @@ td {
 
 #nav_container {
     display: table-cell;
+    padding: 70px 0 0;
     vertical-align: middle;
 }
 
@@ -463,8 +464,7 @@ nav {
 }
 
 #nav_mobile_close {
-    margin: 0 0 0 126px;
-    padding: 0 4px;
+    float: left;
 }
 
 #nav_mobile_container {
@@ -478,6 +478,7 @@ nav {
     text-align: center;
     background-color: var(--overlay);
     color: var(--white_text);
+
 }
 
 #nav_mobile_links {
@@ -510,28 +511,6 @@ nav {
     height: 100vh;
     min-height: 650px;
     margin: 0 0 0 240px;
-}
-
-/*
- *     Home
- */
-#home {
-    background-image: url(img/wall.png);
-    background-color: rgba(47, 60, 69, 1);   
-}
-
-#home div {
-    justify-content: flex-end;
-}
-
-#home_content {
-    flex-basis: 70%;
-    text-align: center;
-}
-
-#landing_title {
-    font-size: 8vmin;
-    font-weight: 500;
 }
 
 /*
@@ -998,7 +977,7 @@ nav {
     }
 
     #nav_mobile_container {
-        display: initial;
+        display: block;
     }
 
     .podcast_host_container {
@@ -1055,6 +1034,17 @@ nav {
         width: 12px;
     }
 }
+
+@media only screen and (max-height: 312px) {
+    #navbar_container {
+        display: none;
+    }
+
+    #nav_mobile_container {
+        display: initial;
+    }
+}
+
 
 /************************************************************************************
  *
