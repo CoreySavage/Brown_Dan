@@ -20,9 +20,12 @@ audio:not([controls]) { display: none; }
  */
 
 :root {
-  --blue: #448aff;
-  --red: #EA626E;
-  --green: #5CEBB5;
+  --blue: #2962ff;
+  --cyan: #0097a7;
+  --dark_blue: #0d47a1;
+  --red: #d50000;
+  --green: #4caf50;
+  --dark_green: #2e7d32;
   --purple: #D58CDC;
   --orange: #FFD77E;
   --grey: rgba(175,175,175,.75);
@@ -134,7 +137,7 @@ h3 {
     font-weight: 700;
     letter-spacing: .6px;
     text-align: center;
-    color: #EA626E;
+    color: var(--green);
     text-shadow:
         -1px -1px 0 #000,  
         1px -1px 0 #000,
@@ -142,17 +145,21 @@ h3 {
         1px 1px 0 #000;
 }
 
-h5 {
-    font-size: 18px;
+h4 {
+    font-size: 24px;
     font-weight: 700;
-    letter-spacing: .6px;
+    letter-spacing: 1.5px;
     text-align: center;
-    color: #EA626E;
-    text-shadow:
-        -1px -1px 0 #000,  
-        1px -1px 0 #000,
-        -1px 1px 0 #000,
-        1px 1px 0 #000;
+    color: var(--dark_blue);
+}
+
+
+h5 {
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-align: center;
+    color: var(--blue);
 }
 
 h6 {
@@ -241,7 +248,7 @@ svg:not(:root) { overflow: hidden; }
  */
 
 button {
-    background-color: var(--blue);
+    background-color: var(--red);
     color: #ffffff;
     padding: 8px 24px;
     margin: 8px 0;
@@ -610,19 +617,31 @@ nav {
     flex-wrap: wrap;
 }
 
-#podcast_flexbox div{
-    margin: 8px;
+.podcast_host_container {
+    width: 320px;
+    align-self: flex-start;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.podcast_host {
+    flex-basis: 50%;
 }
 
 #podcast_flexbox h3 {
-    padding: 32px 0 0 0;
+
 }
 
 .button_flexbox {
     flex-basis: 100%;
     display: flex;
     justify-content: center;
-    padding: 16vh;
+    align-self: flex-start;
+    margin: -2vh 0 0;
 }
 
 #facebook_container {
@@ -980,6 +999,22 @@ nav {
 
     #nav_mobile_container {
         display: initial;
+    }
+
+    .podcast_host_container {
+        width: 270px;
+    }
+
+    h3 {
+        padding: 32px 0 0;
+    }
+
+    h4 {
+        font-size: 20px;
+    }
+
+    h5 {
+        font-size: 18px;
     }
 
     #image_display {
