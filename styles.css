@@ -596,23 +596,21 @@ nav {
     flex-wrap: wrap;
 }
 
-.podcast_host_container {
-    width: 320px;
+#host_title {
     align-self: flex-start;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-
 }
 
-.podcast_host {
-    flex-basis: 50%;
+#host_title {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--dark_blue);
+    text-align: center;
 }
 
-#podcast_flexbox h3 {
 
+#host_title span {
+    font-size: 18px;
 }
 
 .button_flexbox {
@@ -646,7 +644,7 @@ nav {
  */
 
 #pictures {
-    background-image: url(img/spotlight.png);
+    background-image: url(img/blur_flash.jpg);
     background-size: cover;
 }
 
